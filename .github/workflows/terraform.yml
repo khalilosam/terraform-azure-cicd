@@ -38,7 +38,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
 
-       - name: Terraform Plan
+      - name: Terraform Plan
         run: terraform plan -var="ssh_public_key=${{ secrets.SSH_PUBLIC_KEY }}"
 
       - name: Terraform Apply
